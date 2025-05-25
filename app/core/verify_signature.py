@@ -18,6 +18,6 @@ def verify_signature(request: Request, body: bytes):
 
     try:
         verify_key = nacl.signing.VerifyKey(bytes.fromhex(PUBLIC_KEY))
-        verify_key.verify(f"{timestamp}{body.decode()}".encode(), bytes.fromhex(signature))
+        verify_key.verify(timestamp.encode() + body, bytes.fromhex(signature))
     except nacl.exceptions.BadSignatureError:
         raise HTTPException(status_code=401, detail="Invalid request signature")

@@ -7,7 +7,6 @@ The public repository for Airweave's discord bot.
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.95.2-green?style=for-the-badge&logo=fastapi)
 ![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
 ![Docker](https://img.shields.io/badge/Docker-Production%20Ready-blue?style=for-the-badge&logo=docker)
-![License](https://img.shields.io/github/license/airweave-ai/airweave?style=for-the-badge)
 
 > A modern, scalable Discord bot built with FastAPI, designed for seamless integration and high performance.
 
