@@ -1,7 +1,10 @@
 from fastapi import APIRouter, Request
 from app.core.verify_signature import verify_signature
+from app.api import auth, user
 
 router = APIRouter()
+router.include_router(auth.router, prefix="/discord/auth", tags=["auth"])
+router.include_router(user.router, prefix="/discord/user", tags=["user"])
 
 @router.post("/interactions")
 async def interactions(request: Request):
